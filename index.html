@@ -54,7 +54,7 @@
         }
         .glow-effect { box-shadow: 0 0 40px -10px rgba(139, 92, 246, 0.5); }
         
-        /* Shopify Button Wrapper Customization (Forced Center) */
+        /* Shopify Button Wrapper Customization (Forced Center & Touch Fix) */
         #product-component-1775361395684 {
             display: flex !important;
             justify-content: center !important;
@@ -62,6 +62,9 @@
             width: 100% !important;
             text-align: center !important;
             margin: 0 auto !important;
+            position: relative;
+            z-index: 50;
+            pointer-events: auto;
         }
         #product-component-1775361395684 iframe {
             margin: 0 auto !important;
@@ -69,7 +72,8 @@
         }
     </style>
 </head>
-<body class="antialiased selection:bg-primary selection:text-white relative">
+<!-- はみ出し防止のため overflow-x-hidden を追加 -->
+<body class="antialiased selection:bg-primary selection:text-white relative overflow-x-hidden">
 
     <!-- Background Decoration -->
     <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0"></div>
@@ -81,25 +85,25 @@
         <header class="fixed w-full top-0 bg-darker/80 backdrop-blur-md border-b border-white/10 z-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
                 <div class="font-black text-2xl tracking-tighter text-white">YDK<span class="text-primary">.</span></div>
-                <a href="#cta" class="bg-white text-darker font-bold py-2 px-6 rounded-full text-sm hover:bg-gray-200 transition">今すぐ手に入れる</a>
+                <a href="#cta" class="bg-white text-darker font-bold py-2 px-4 sm:px-6 rounded-full text-xs sm:text-sm hover:bg-gray-200 transition">今すぐ手に入れる</a>
             </div>
         </header>
 
         <!-- Hero Section -->
         <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center min-h-[90vh] flex flex-col justify-center">
-            <div data-aos="fade-down" class="inline-block mx-auto mb-6 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-bold tracking-wide">
+            <div data-aos="fade-down" class="inline-block mx-auto mb-6 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs sm:text-sm font-bold tracking-wide">
                 「AIを作る側」の現役エンジニアが明かす全自動化設計図
             </div>
-            <h1 data-aos="fade-up" data-aos-delay="100" class="text-4xl md:text-6xl font-black leading-tight mb-6">
+            <h1 data-aos="fade-up" data-aos-delay="100" class="text-3xl sm:text-4xl md:text-6xl font-black leading-tight mb-6">
                 月額数万円のAPI課金地獄と<br class="hidden md:block">スクレイピングの罠を抜け出す<br>
-                <span class="text-gradient">家から出ないビジネス完全キット</span>
+                <span class="text-gradient block mt-2">家から出ない起業コンプリートキット</span>
             </h1>
-            <p data-aos="fade-up" data-aos-delay="200" class="text-lg md:text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+            <p data-aos="fade-up" data-aos-delay="200" class="text-base sm:text-lg md:text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed px-2">
                 次々と新しいAIツールに課金させられ、結局どれも使いこなせていないあなたへ。<br>
                 たった1つのAIを極め、費用0円のローカル環境で利益を生み出す「本物の技術」を公開します。
             </p>
             <div data-aos="zoom-in" data-aos-delay="300" class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#cta" class="w-full sm:w-auto bg-gradient-primary hover:opacity-90 text-white font-bold text-lg py-4 px-10 rounded-full glow-effect transition transform hover:scale-105 flex items-center justify-center">
+                <a href="#cta" class="w-full sm:w-auto bg-gradient-primary hover:opacity-90 text-white font-bold text-base sm:text-lg py-4 px-8 sm:px-10 rounded-full glow-effect transition transform hover:scale-105 flex items-center justify-center">
                     完全自動化の設計図を手に入れる
                     <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
                 </a>
@@ -111,39 +115,39 @@
             <div class="max-w-4xl mx-auto px-4">
                 <div data-aos="fade-up" class="text-center mb-12">
                     <i data-lucide="alert-triangle" class="w-16 h-16 text-red-500 mx-auto mb-4"></i>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">あなたは今、こんな「AIの罠」に<br class="hidden sm:block">ハマっていませんか？</h2>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">あなたは今、こんな「AIの罠」に<br class="hidden sm:block">ハマっていませんか？</h2>
                 </div>
                 
                 <div class="grid gap-4 md:grid-cols-2">
                     <div data-aos="fade-up" data-aos-delay="100" class="bg-dark p-6 rounded-2xl border border-red-500/20">
                         <div class="flex items-start">
                             <i data-lucide="x-circle" class="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-1"></i>
-                            <p class="text-gray-300">「放置で稼げる」と言われて<span class="text-red-400 font-bold">高額AIスクール</span>に入ったが、毎月の外部API代が高すぎて赤字になっている。</p>
+                            <p class="text-gray-300 text-sm sm:text-base">「放置で稼げる」と言われて<span class="text-red-400 font-bold">高額AIスクール</span>に入ったが、毎月の外部API代が高すぎて赤字になっている。</p>
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="200" class="bg-dark p-6 rounded-2xl border border-red-500/20">
                         <div class="flex items-start">
                             <i data-lucide="x-circle" class="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-1"></i>
-                            <p class="text-gray-300">「最新の自動化ツール」として教えられたスクレイピングツールを使ったら、大切な<span class="text-red-400 font-bold">SNSアカウントが一発でBAN</span>された。</p>
+                            <p class="text-gray-300 text-sm sm:text-base">「最新の自動化ツール」として教えられたスクレイピングツールを使ったら、大切な<span class="text-red-400 font-bold">SNSアカウントが一発でBAN</span>された。</p>
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="300" class="bg-dark p-6 rounded-2xl border border-red-500/20">
                         <div class="flex items-start">
                             <i data-lucide="x-circle" class="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-1"></i>
-                            <p class="text-gray-300">ChatGPT、Claude、Midjourney…次々と新しいAIツールに<span class="text-red-400 font-bold">課金させられ</span>、結局どれも使いこなせていない。</p>
+                            <p class="text-gray-300 text-sm sm:text-base">ChatGPT、Claude、Midjourney…次々と新しいAIツールに<span class="text-red-400 font-bold">課金させられ</span>、結局どれも使いこなせていない。</p>
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="400" class="bg-dark p-6 rounded-2xl border border-red-500/20">
                         <div class="flex items-start">
                             <i data-lucide="x-circle" class="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-1"></i>
-                            <p class="text-gray-300">Claude Codeに全部丸投げしたら、<span class="text-red-400 font-bold">意味不明なエラー</span>が出て、誰も助けてくれなかった。</p>
+                            <p class="text-gray-300 text-sm sm:text-base">Claude Codeに全部丸投げしたら、<span class="text-red-400 font-bold">意味不明なエラー</span>が出て、誰も助けてくれなかった。</p>
                         </div>
                     </div>
                 </div>
 
                 <div data-aos="zoom-in" class="mt-16 text-center">
-                    <h3 class="text-2xl md:text-3xl font-black text-white mb-6">もし一つでも当てはまるなら、<br>今すぐ無駄なサブスクと高額コンサルを解約してください。</h3>
-                    <p class="text-xl text-gray-400 bg-red-900/20 border border-red-500/30 p-6 rounded-xl inline-block">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl font-black text-white mb-6">もし一つでも当てはまるなら、<br>今すぐ無駄なサブスクと高額コンサルを解約してください。</h3>
+                    <p class="text-base sm:text-xl text-gray-400 bg-red-900/20 border border-red-500/30 p-4 sm:p-6 rounded-xl inline-block max-w-full">
                         <strong class="text-white">AIは魔法ではありません。</strong><br>
                         ハルシネーション（嘘）を吐くし、間違った使い方をすればアカウントを吹き飛ばす危険なツールです。
                     </p>
@@ -159,13 +163,13 @@
                         50万、100万のAIスクール？<br>
                         <span class="text-red-500">はっきり言って、異常です。</span>
                     </h2>
-                    <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                    <p class="text-base sm:text-lg text-gray-300 mb-6 leading-relaxed">
                         はじめまして。現役のAIエンジニアとして、Pythonや機械学習を用いた自社アプリや国産投資AIの開発を行っている「しーちゃん」と申します。
                     </p>
-                    <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                    <p class="text-base sm:text-lg text-gray-300 mb-6 leading-relaxed">
                         世の中のAIコンサルの99%は、他人が作ったAIをただ「使う側」の人間です。しかし、私はゼロから<strong class="text-white text-xl border-b-2 border-primary pb-1">「AIを作る側」</strong>のエンジニアです。だからこそ、AI業界の裏側も、システムの限界もすべて知っています。
                     </p>
-                    <p class="text-lg text-gray-300 leading-relaxed border-l-4 border-primary pl-4">
+                    <p class="text-base sm:text-lg text-gray-300 leading-relaxed border-l-4 border-primary pl-4">
                         巷の高額スクールが教えているノウハウの多くは、非エンジニアを食い物にする情弱ビジネスです。APIの従量課金リスクを隠し、規約違反のスクレイピングを教え、無責任にツールを使わせます。<br>
                         本当のエンジニアは、そんな無駄で危険なことは絶対にしません。
                     </p>
@@ -173,44 +177,44 @@
                 
                 <div data-aos="fade-left" class="lg:w-1/2 w-full">
                     <div class="bg-gradient-to-br from-slate-800 to-darker p-1 rounded-2xl glow-effect">
-                        <div class="bg-darker rounded-xl p-8 border border-white/10 h-full">
-                            <h3 class="text-2xl font-bold text-center mb-8 pb-4 border-b border-white/10">これが「AIを作る側」のリアルです</h3>
+                        <div class="bg-darker rounded-xl p-6 sm:p-8 border border-white/10 h-full">
+                            <h3 class="text-xl sm:text-2xl font-bold text-center mb-8 pb-4 border-b border-white/10">これが「AIを作る側」のリアルです</h3>
                             
                             <div class="space-y-6">
                                 <div class="flex items-center">
-                                    <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mr-4 shrink-0">
-                                        <i data-lucide="check" class="text-primary w-6 h-6"></i>
+                                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center mr-4 shrink-0">
+                                        <i data-lucide="check" class="text-primary w-5 h-5 sm:w-6 sm:h-6"></i>
                                     </div>
                                     <div>
-                                        <p class="text-sm text-gray-400">スクール代・コンサル費用</p>
-                                        <p class="text-xl font-bold text-white"><span class="text-gradient-gold text-2xl">完全0円</span>の独学</p>
+                                        <p class="text-xs sm:text-sm text-gray-400">スクール代・コンサル費用</p>
+                                        <p class="text-lg sm:text-xl font-bold text-white"><span class="text-gradient-gold text-xl sm:text-2xl">完全0円</span>の独学</p>
                                     </div>
                                 </div>
                                 <div class="flex items-center">
-                                    <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mr-4 shrink-0">
-                                        <i data-lucide="trending-up" class="text-primary w-6 h-6"></i>
+                                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center mr-4 shrink-0">
+                                        <i data-lucide="trending-up" class="text-primary w-5 h-5 sm:w-6 sm:h-6"></i>
                                     </div>
                                     <div>
-                                        <p class="text-sm text-gray-400">初期費用0円・AIサブスク0円から</p>
-                                        <p class="text-xl font-bold text-white">初月<span class="text-gradient-gold text-2xl">100万</span>、最高月収<span class="text-gradient-gold text-2xl">300万</span>達成</p>
+                                        <p class="text-xs sm:text-sm text-gray-400">初期費用0円・AIサブスク0円から</p>
+                                        <p class="text-lg sm:text-xl font-bold text-white">初月<span class="text-gradient-gold text-xl sm:text-2xl">100万</span>、最高月収<span class="text-gradient-gold text-xl sm:text-2xl">300万</span>達成</p>
                                     </div>
                                 </div>
                                 <div class="flex items-center">
-                                    <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mr-4 shrink-0">
-                                        <i data-lucide="code" class="text-primary w-6 h-6"></i>
+                                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center mr-4 shrink-0">
+                                        <i data-lucide="code" class="text-primary w-5 h-5 sm:w-6 sm:h-6"></i>
                                     </div>
                                     <div>
-                                        <p class="text-sm text-gray-400">プログラミング・デザインスキル</p>
-                                        <p class="text-xl font-bold text-white">AI作成、アプリ作成、Webデザインも<span class="text-gradient-gold text-2xl">0円</span>で習得</p>
+                                        <p class="text-xs sm:text-sm text-gray-400">プログラミング・デザインスキル</p>
+                                        <p class="text-lg sm:text-xl font-bold text-white">AI作成、アプリ作成、Webデザインも<span class="text-gradient-gold text-xl sm:text-2xl">0円</span>で習得</p>
                                     </div>
                                 </div>
                                 <div class="flex items-center">
-                                    <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mr-4 shrink-0">
-                                        <i data-lucide="users" class="text-primary w-6 h-6"></i>
+                                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center mr-4 shrink-0">
+                                        <i data-lucide="users" class="text-primary w-5 h-5 sm:w-6 sm:h-6"></i>
                                     </div>
                                     <div>
-                                        <p class="text-sm text-gray-400">費用0円の自作AIを活用し</p>
-                                        <p class="text-xl font-bold text-white">1日でフォロワー<span class="text-gradient-gold text-2xl">1000人</span>、2週間で<span class="text-gradient-gold text-2xl">7000人</span></p>
+                                        <p class="text-xs sm:text-sm text-gray-400">費用0円の自作AIを活用し</p>
+                                        <p class="text-lg sm:text-xl font-bold text-white">1日でフォロワー<span class="text-gradient-gold text-xl sm:text-2xl">1000人</span>、2週間で<span class="text-gradient-gold text-xl sm:text-2xl">7000人</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -223,29 +227,29 @@
         <!-- Solution Section -->
         <section class="py-20 bg-slate-900/50">
             <div class="max-w-5xl mx-auto px-4 text-center">
-                <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold mb-16">AIエンジニアが実践する<br><span class="text-primary">3つの「正攻法」</span></h2>
+                <h2 data-aos="fade-up" class="text-2xl sm:text-3xl md:text-4xl font-bold mb-16">AIエンジニアが実践する<br><span class="text-primary">3つの「正攻法」</span></h2>
                 
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div data-aos="fade-up" data-aos-delay="100" class="bg-dark p-8 rounded-2xl border border-white/5 relative overflow-hidden group">
+                <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+                    <div data-aos="fade-up" data-aos-delay="100" class="bg-dark p-6 sm:p-8 rounded-2xl border border-white/5 relative overflow-hidden group">
                         <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
-                            <i data-lucide="shield-check" class="w-24 h-24"></i>
+                            <i data-lucide="shield-check" class="w-20 h-20 sm:w-24 sm:h-24"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 text-white relative z-10">01. スクレイピングは使わない</h3>
-                        <p class="text-gray-400 relative z-10 text-left">アカウント凍結のリスクを負う「裏技」は捨てます。公式APIを使って、安全かつ確実にデータを取得する基盤を作ります。</p>
+                        <h3 class="text-lg sm:text-xl font-bold mb-4 text-white relative z-10">01. スクレイピングは使わない</h3>
+                        <p class="text-gray-400 text-sm sm:text-base relative z-10 text-left">アカウント凍結のリスクを負う「裏技」は捨てます。公式APIを使って、安全かつ確実にデータを取得する基盤を作ります。</p>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="200" class="bg-dark p-8 rounded-2xl border border-white/5 relative overflow-hidden group">
+                    <div data-aos="fade-up" data-aos-delay="200" class="bg-dark p-6 sm:p-8 rounded-2xl border border-white/5 relative overflow-hidden group">
                         <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
-                            <i data-lucide="banknote" class="w-24 h-24"></i>
+                            <i data-lucide="banknote" class="w-20 h-20 sm:w-24 sm:h-24"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 text-white relative z-10">02. 外部APIに課金しない</h3>
-                        <p class="text-gray-400 relative z-10 text-left">高額なAPI代で赤字になるのは本末転倒。Google Colabや手元のローカル環境を使って、ランニングコストを徹底的にゼロに抑えます。</p>
+                        <h3 class="text-lg sm:text-xl font-bold mb-4 text-white relative z-10">02. 外部APIに課金しない</h3>
+                        <p class="text-gray-400 text-sm sm:text-base relative z-10 text-left">高額なAPI代で赤字になるのは本末転倒。Google Colabや手元のローカル環境を使って、ランニングコストを徹底的にゼロに抑えます。</p>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="300" class="bg-dark p-8 rounded-2xl border border-white/5 relative overflow-hidden group">
+                    <div data-aos="fade-up" data-aos-delay="300" class="bg-dark p-6 sm:p-8 rounded-2xl border border-white/5 relative overflow-hidden group sm:col-span-2 md:col-span-1">
                         <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
-                            <i data-lucide="cpu" class="w-24 h-24"></i>
+                            <i data-lucide="cpu" class="w-20 h-20 sm:w-24 sm:h-24"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 text-white relative z-10">03. ツールは増やさない</h3>
-                        <p class="text-gray-400 relative z-10 text-left">無駄なサブスクはすべて解約してください。たった一つの汎用AI（LLM）を、役割プロンプティングで骨の髄まで使い倒します。</p>
+                        <h3 class="text-lg sm:text-xl font-bold mb-4 text-white relative z-10">03. ツールは増やさない</h3>
+                        <p class="text-gray-400 text-sm sm:text-base relative z-10 text-left">無駄なサブスクはすべて解約してください。たった一つの汎用AI（LLM）を、役割プロンプティングで骨の髄まで使い倒します。</p>
                     </div>
                 </div>
             </div>
@@ -254,85 +258,85 @@
         <!-- Product Steps -->
         <section class="py-24 max-w-5xl mx-auto px-4">
             <div class="text-center mb-16">
-                <span class="text-primary font-bold tracking-widest text-sm uppercase">The Program</span>
+                <span class="text-primary font-bold tracking-widest text-xs sm:text-sm uppercase">The Program</span>
                 <h2 data-aos="fade-up" class="text-3xl md:text-5xl font-black mt-2 mb-6">これ一つで完結する「5つのステップ」</h2>
-                <p data-aos="fade-up" data-aos-delay="100" class="text-gray-400 max-w-2xl mx-auto">
+                <p data-aos="fade-up" data-aos-delay="100" class="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto px-2">
                     単なるプロンプト集ではありません。「AIを作る側」である私が使っているコード、テンプレート、そして自動化の設計図をすべて公開する完全版パッケージです。<br>
                     あなた自身の知識や経験をビジネスのDNAに適合させ、たった一人で事業を立ち上げるための武器を提供します。
                 </p>
-                <div data-aos="zoom-in" class="mt-8 inline-flex items-center bg-white/5 rounded-full px-6 py-2 border border-white/10">
+                <div data-aos="zoom-in" class="mt-8 inline-flex items-center bg-white/5 rounded-full px-4 sm:px-6 py-2 border border-white/10">
                     <i data-lucide="play-circle" class="text-primary w-5 h-5 mr-2"></i>
-                    <span class="text-sm font-bold text-gray-300">全ステップに「詳細動画」「音声ポッドキャスト」「復習スライド」付属</span>
+                    <span class="text-xs sm:text-sm font-bold text-gray-300">全ステップに「詳細動画」「音声ポッドキャスト」「復習スライド」付属</span>
                 </div>
             </div>
 
             <div class="space-y-6">
                 <!-- Step 1 -->
-                <div data-aos="fade-up" class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start hover:bg-slate-800 transition">
-                    <div class="bg-primary/20 text-primary font-black text-2xl w-16 h-16 rounded-xl flex items-center justify-center shrink-0">01</div>
+                <div data-aos="fade-up" class="bg-slate-800/50 border border-white/10 rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col md:flex-row gap-4 sm:gap-6 items-start hover:bg-slate-800 transition">
+                    <div class="bg-primary/20 text-primary font-black text-xl sm:text-2xl w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center shrink-0">01</div>
                     <div>
-                        <h3 class="text-2xl font-bold mb-3">1つのLLMを極める <span class="text-sm font-normal text-gray-400 ml-2">（基礎・リサーチ編）</span></h3>
-                        <p class="text-gray-300 mb-4">もう複数のAIに課金する必要はありません。AIに明確なペルソナを設定する「役割プロンプティング」を駆使し、1つのAIに「リサーチャー」「プログラマー」「マーケター」の三役を兼任させます。</p>
-                        <ul class="space-y-2 text-sm text-gray-400">
-                            <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0"></i> 【役割定義】研究者・プログラマー・マーケターの限界突破プロンプト辞書</li>
-                            <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0"></i> 事実誤認を防ぐ、ハルシネーション完全封殺・自己検閲プロンプト</li>
-                            <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0"></i> 無駄課金ゼロ！ローカル環境×単一AIの「思考整理ワークスペース」構築</li>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-3">1つのLLMを極める <span class="text-xs sm:text-sm font-normal text-gray-400 ml-2 block sm:inline mt-1 sm:mt-0">（基礎・リサーチ編）</span></h3>
+                        <p class="text-sm sm:text-base text-gray-300 mb-4">もう複数のAIに課金する必要はありません。AIに明確なペルソナを設定する「役割プロンプティング」を駆使し、1つのAIに「リサーチャー」「プログラマー」「マーケター」の三役を兼任させます。</p>
+                        <ul class="space-y-2 text-xs sm:text-sm text-gray-400">
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0 mt-0.5"></i> <span>【役割定義】研究者・プログラマー・マーケターの限界突破プロンプト辞書</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0 mt-0.5"></i> <span>事実誤認を防ぐ、ハルシネーション完全封殺・自己検閲プロンプト</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0 mt-0.5"></i> <span>無駄課金ゼロ！ローカル環境×単一AIの「思考整理ワークスペース」構築</span></li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Step 2 -->
-                <div data-aos="fade-up" class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start hover:bg-slate-800 transition">
-                    <div class="bg-primary/20 text-primary font-black text-2xl w-16 h-16 rounded-xl flex items-center justify-center shrink-0">02</div>
+                <div data-aos="fade-up" class="bg-slate-800/50 border border-white/10 rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col md:flex-row gap-4 sm:gap-6 items-start hover:bg-slate-800 transition">
+                    <div class="bg-primary/20 text-primary font-black text-xl sm:text-2xl w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center shrink-0">02</div>
                     <div>
-                        <h3 class="text-2xl font-bold mb-3">自分だけの商品を作る <span class="text-sm font-normal text-gray-400 ml-2">（プロダクト開発編）</span></h3>
-                        <p class="text-gray-300 mb-4">AIを活用し、あなた自身の知識を「売れるデジタル商品」として爆速でパッケージングします。PDF教材、note、自分専用ツールの開発まで、最小機能から商品化するプロセスを網羅。</p>
-                        <ul class="space-y-2 text-sm text-gray-400">
-                            <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0"></i> 出力結果をそのまま商材にする、AIコンテンツ自動組版＆パッケージ化システム</li>
-                            <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0"></i> ゼロから作る「自分専用ツール（Python）」の商品化コードベース</li>
-                            <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0"></i> ターゲットに合わせた価格設計・パッケージング最適化プロンプト</li>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-3">自分だけの商品を作る <span class="text-xs sm:text-sm font-normal text-gray-400 ml-2 block sm:inline mt-1 sm:mt-0">（プロダクト開発編）</span></h3>
+                        <p class="text-sm sm:text-base text-gray-300 mb-4">AIを活用し、あなた自身の知識を「売れるデジタル商品」として爆速でパッケージングします。PDF教材、note、自分専用ツールの開発まで、最小機能から商品化するプロセスを網羅。</p>
+                        <ul class="space-y-2 text-xs sm:text-sm text-gray-400">
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0 mt-0.5"></i> <span>出力結果をそのまま商材にする、AIコンテンツ自動組版＆パッケージ化システム</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0 mt-0.5"></i> <span>ゼロから作る「自分専用ツール（Python）」の商品化コードベース</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0 mt-0.5"></i> <span>ターゲットに合わせた価格設計・パッケージング最適化プロンプト</span></li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Step 3 -->
-                <div data-aos="fade-up" class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start hover:bg-slate-800 transition">
-                    <div class="bg-primary/20 text-primary font-black text-2xl w-16 h-16 rounded-xl flex items-center justify-center shrink-0">03</div>
+                <div data-aos="fade-up" class="bg-slate-800/50 border border-white/10 rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col md:flex-row gap-4 sm:gap-6 items-start hover:bg-slate-800 transition">
+                    <div class="bg-primary/20 text-primary font-black text-xl sm:text-2xl w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center shrink-0">03</div>
                     <div>
-                        <h3 class="text-2xl font-bold mb-3">「売れる」LPを作る <span class="text-sm font-normal text-gray-400 ml-2">（販売ページ構築編）</span></h3>
-                        <p class="text-gray-300 mb-4">Shopify等の販売ページで、顧客の痛みを的確に突き、購入ボタンを押させる強烈なコピーライティングと構成をAIに作らせます。デザイナー不要でプロ級のLPが完成します。</p>
-                        <ul class="space-y-2 text-sm text-gray-400">
-                            <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0"></i> Shopify専用・高額スクールに勝つ「反証型」LPライティング呪文</li>
-                            <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0"></i> 心理学×AI：顧客の痛みを突くキャッチコピー100連発ジェネレーター</li>
-                            <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0"></i> 権威性を示すLP用アイキャッチ画像生成プロンプト</li>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-3">「売れる」LPを作る <span class="text-xs sm:text-sm font-normal text-gray-400 ml-2 block sm:inline mt-1 sm:mt-0">（販売ページ構築編）</span></h3>
+                        <p class="text-sm sm:text-base text-gray-300 mb-4">Shopify等の販売ページで、顧客の痛みを的確に突き、購入ボタンを押させる強烈なコピーライティングと構成をAIに作らせます。デザイナー不要でプロ級のLPが完成します。</p>
+                        <ul class="space-y-2 text-xs sm:text-sm text-gray-400">
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0 mt-0.5"></i> <span>Shopify専用・高額スクールに勝つ「反証型」LPライティング呪文</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0 mt-0.5"></i> <span>心理学×AI：顧客の痛みを突くキャッチコピー100連発ジェネレーター</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0 mt-0.5"></i> <span>権威性を示すLP用アイキャッチ画像生成プロンプト</span></li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Step 4 -->
-                <div data-aos="fade-up" class="bg-slate-800/50 border border-white/10 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start hover:bg-slate-800 transition">
-                    <div class="bg-primary/20 text-primary font-black text-2xl w-16 h-16 rounded-xl flex items-center justify-center shrink-0">04</div>
+                <div data-aos="fade-up" class="bg-slate-800/50 border border-white/10 rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col md:flex-row gap-4 sm:gap-6 items-start hover:bg-slate-800 transition">
+                    <div class="bg-primary/20 text-primary font-black text-xl sm:text-2xl w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center shrink-0">04</div>
                     <div>
-                        <h3 class="text-2xl font-bold mb-3">Threadsで集客する <span class="text-sm font-normal text-gray-400 ml-2">（SNSマーケティング編）</span></h3>
-                        <p class="text-gray-300 mb-4">スクレイピングのBANリスクを完全に排除。公式APIと分析データを用いて、安全で爆発的な集客システムを構築します。炎上を回避しつつ、共感を生む尖った主張を展開します。</p>
-                        <ul class="space-y-2 text-sm text-gray-400">
-                            <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0"></i> Threads API連動・「伸びるキーワード」自動抽出Pythonスクリプト</li>
-                            <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0"></i> 結論・失敗・誤解・便乗の「Threads 4つの型」完全自動生成マクロ</li>
-                            <li class="flex items-center"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0"></i> 1日10分！GASを活用したThreads自動化・予約投稿カレンダー構築</li>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-3">Threadsで集客する <span class="text-xs sm:text-sm font-normal text-gray-400 ml-2 block sm:inline mt-1 sm:mt-0">（SNSマーケティング編）</span></h3>
+                        <p class="text-sm sm:text-base text-gray-300 mb-4">スクレイピングのBANリスクを完全に排除。公式APIと分析データを用いて、安全で爆発的な集客システムを構築します。炎上を回避しつつ、共感を生む尖った主張を展開します。</p>
+                        <ul class="space-y-2 text-xs sm:text-sm text-gray-400">
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0 mt-0.5"></i> <span>Threads API連動・「伸びるキーワード」自動抽出Pythonスクリプト</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0 mt-0.5"></i> <span>結論・失敗・誤解・便乗の「Threads 4つの型」完全自動生成マクロ</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-400 mr-2 shrink-0 mt-0.5"></i> <span>1日10分！GASを活用したThreads自動化・予約投稿カレンダー構築</span></li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Step 5 -->
-                <div data-aos="fade-up" class="bg-gradient-to-r from-blue-900/40 to-violet-900/40 border border-primary/30 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start">
-                    <div class="bg-gradient-primary text-white font-black text-2xl w-16 h-16 rounded-xl flex items-center justify-center shrink-0 shadow-lg shadow-primary/50">05</div>
+                <div data-aos="fade-up" class="bg-gradient-to-r from-blue-900/40 to-violet-900/40 border border-primary/30 rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col md:flex-row gap-4 sm:gap-6 items-start">
+                    <div class="bg-gradient-primary text-white font-black text-xl sm:text-2xl w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center shrink-0 shadow-lg shadow-primary/50">05</div>
                     <div>
-                        <h3 class="text-2xl font-bold mb-3 text-white">すべてを統合する <span class="text-sm font-normal text-gray-300 ml-2">（オールインワン・バックエンド級）</span></h3>
-                        <p class="text-gray-200 mb-4">企画から集客までを一気通貫で自動化する、旗艦パッケージ。各ステップのコードとプロンプトを整理された環境で一元管理し、あなたのビジネスをスケールさせます。</p>
-                        <ul class="space-y-2 text-sm text-gray-300">
-                            <li class="flex items-center"><i data-lucide="star" class="w-4 h-4 text-accent mr-2 fill-accent shrink-0"></i> 全コード＋プロンプト集のコンプリートバンドル</li>
-                            <li class="flex items-center"><i data-lucide="star" class="w-4 h-4 text-accent mr-2 fill-accent shrink-0"></i> ユーザーの事業に合わせてLLMを個別カスタマイズする設定フロー</li>
-                            <li class="flex items-center"><i data-lucide="star" class="w-4 h-4 text-accent mr-2 fill-accent shrink-0"></i> しーちゃんの頭脳インストール：一気通貫・全自動化マクロ設計図</li>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">すべてを統合する <span class="text-xs sm:text-sm font-normal text-gray-300 ml-2 block sm:inline mt-1 sm:mt-0">（オールインワン・バックエンド級）</span></h3>
+                        <p class="text-sm sm:text-base text-gray-200 mb-4">企画から集客までを一気通貫で自動化する、旗艦パッケージ。各ステップのコードとプロンプトを整理された環境で一元管理し、あなたのビジネスをスケールさせます。</p>
+                        <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+                            <li class="flex items-start"><i data-lucide="star" class="w-4 h-4 text-accent mr-2 fill-accent shrink-0 mt-0.5"></i> <span>全コード＋プロンプト集のコンプリートバンドル</span></li>
+                            <li class="flex items-start"><i data-lucide="star" class="w-4 h-4 text-accent mr-2 fill-accent shrink-0 mt-0.5"></i> <span>ユーザーの事業に合わせてLLMを個別カスタマイズする設定フロー</span></li>
+                            <li class="flex items-start"><i data-lucide="star" class="w-4 h-4 text-accent mr-2 fill-accent shrink-0 mt-0.5"></i> <span>しーちゃんの頭脳インストール：一気通貫・全自動化マクロ設計図</span></li>
                         </ul>
                     </div>
                 </div>
@@ -341,71 +345,72 @@
 
         <!-- Bonus Section -->
         <section class="py-20 bg-amber-900/10 border-y border-amber-500/20 relative overflow-hidden">
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+            <!-- w-[800px]によるはみ出しを防ぐため親にoverflow-hiddenを付与済み -->
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] aspect-square bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
             
             <div class="max-w-4xl mx-auto px-4 relative z-10">
                 <div class="text-center mb-12">
-                    <span class="bg-accent text-darker font-black px-4 py-1 rounded-full text-sm tracking-wider">LIMITED BONUS</span>
-                    <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold mt-6 mb-4 text-white">今だけ手に入る「キラー特典」</h2>
-                    <p data-aos="fade-up" data-aos-delay="100" class="text-gray-400">本キットをご購入いただいた方限定で、私が実務で使っている非売品の裏マニュアルと実践コンテンツを提供します。</p>
+                    <span class="bg-accent text-darker font-black px-4 py-1 rounded-full text-xs sm:text-sm tracking-wider">LIMITED BONUS</span>
+                    <h2 data-aos="fade-up" class="text-2xl sm:text-3xl md:text-4xl font-bold mt-6 mb-4 text-white">今だけ手に入る「キラー特典」</h2>
+                    <p data-aos="fade-up" data-aos-delay="100" class="text-sm sm:text-base text-gray-400">本キットをご購入いただいた方限定で、私が実務で使っている非売品の裏マニュアルと実践コンテンツを提供します。</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-6">
                     <div data-aos="fade-up" data-aos-delay="200" class="bg-gradient-to-br from-slate-900 to-dark p-6 rounded-2xl border border-amber-500/30">
-                        <div class="text-accent mb-4"><i data-lucide="flame" class="w-10 h-10"></i></div>
-                        <h3 class="text-xl font-bold mb-3">【暴露】100万円のAIスクールが隠す<br>本当のコストと「Claude Codeの闇」</h3>
-                        <p class="text-sm text-gray-400 mb-4">(PDFレポート)</p>
-                        <p class="text-gray-300 text-sm leading-relaxed">「放置で稼げる」と煽る悪徳コンサルの手口や、自動化ツールを盲信してアカウントが即BANされる悲劇の裏側を、エンジニアの視点で徹底解説。これを知るだけで、今後の無駄な出費とリスクを数十万円単位で防げます。</p>
+                        <div class="text-accent mb-4"><i data-lucide="flame" class="w-8 h-8 sm:w-10 sm:h-10"></i></div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-3">【暴露】100万円のAIスクールが隠す<br>本当のコストと「Claude Codeの闇」</h3>
+                        <p class="text-xs sm:text-sm text-gray-400 mb-4">(PDFレポート)</p>
+                        <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">「放置で稼げる」と煽る悪徳コンサルの手口や、自動化ツールを盲信してアカウントが即BANされる悲劇の裏側を、エンジニアの視点で徹底解説。これを知るだけで、今後の無駄な出費とリスクを数十万円単位で防げます。</p>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="300" class="bg-gradient-to-br from-slate-900 to-dark p-6 rounded-2xl border border-amber-500/30">
-                        <div class="text-accent mb-4"><i data-lucide="cpu" class="w-10 h-10"></i></div>
-                        <h3 class="text-xl font-bold mb-3">【プロンプト奥義】2026年最新版<br>LLMプロンプトエンジニアリング体系的解説</h3>
-                        <p class="text-sm text-gray-400 mb-4">(専用デジタルマニュアル)</p>
-                        <p class="text-gray-300 text-sm leading-relaxed">コンプリートキット購入者だけの特別ボーナス。もはや「うまい一文」を探す時代は終わりました。OpenAI、Claude、Geminiの最新設計方針に基づき、プロンプトエンジニアリングから「コンテキストエンジニアリング」へとシフトするための極意を体系化。モデル非依存の大原則から、各LLMの個別ルールの適用まで、AI開発者が現場で使う設計図をそのままお渡しします。</p>
+                        <div class="text-accent mb-4"><i data-lucide="cpu" class="w-8 h-8 sm:w-10 sm:h-10"></i></div>
+                        <h3 class="text-lg sm:text-xl font-bold mb-3">【プロンプト奥義】2026年最新版<br>LLMプロンプトエンジニアリング体系的解説</h3>
+                        <p class="text-xs sm:text-sm text-gray-400 mb-4">(専用デジタルマニュアル)</p>
+                        <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">コンプリートキット購入者だけの特別ボーナス。もはや「うまい一文」を探す時代は終わりました。OpenAI、Claude、Geminiの最新設計方針に基づき、プロンプトエンジニアリングから「コンテキストエンジニアリング」へとシフトするための極意を体系化。モデル非依存の大原則から、各LLMの個別ルールの適用まで、AI開発者が現場で使う設計図をそのままお渡しします。</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Pricing & CTA Section -->
-        <section id="cta" class="py-24 max-w-4xl mx-auto px-4 text-center">
-            <h2 data-aos="fade-up" class="text-3xl md:text-5xl font-black mb-8">もう、騙されるのは終わりにしませんか？</h2>
+        <section id="cta" class="py-24 max-w-4xl mx-auto px-4 text-center relative z-40">
+            <h2 data-aos="fade-up" class="text-2xl sm:text-3xl md:text-5xl font-black mb-8">もう、騙されるのは終わりにしませんか？</h2>
             
-            <p data-aos="fade-up" data-aos-delay="100" class="text-lg text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p data-aos="fade-up" data-aos-delay="100" class="text-sm sm:text-lg text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
                 世の中には、この内容の1/10にも満たない「APIを叩くだけのノウハウ」を、50万円、100万円で売りつけるスクールが溢れています。<br>
                 さらに、その後には毎月数万円のAPI課金地獄が待っています。
             </p>
 
-            <div data-aos="zoom-in" data-aos-delay="200" class="bg-gradient-to-b from-slate-800 to-darker border border-yellow-500/50 rounded-3xl p-8 md:p-12 relative glow-effect max-w-2xl mx-auto mt-16">
-                <!-- Highlighted Top Badge -->
-                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-yellow-400 text-black font-black text-lg md:text-xl py-3 px-8 rounded-full border-4 border-darker whitespace-nowrap shadow-xl shadow-yellow-400/30">
+            <div data-aos="zoom-in" data-aos-delay="200" class="bg-gradient-to-b from-slate-800 to-darker border border-yellow-500/50 rounded-3xl p-6 sm:p-8 md:p-12 relative glow-effect max-w-2xl mx-auto mt-16">
+                <!-- Highlighted Top Badge (はみ出し防止のため whitespace-normal と width 調整) -->
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-yellow-400 text-black font-black text-sm sm:text-base md:text-xl py-2 sm:py-3 px-4 sm:px-8 rounded-full border-4 border-darker shadow-xl shadow-yellow-400/30 w-[90%] sm:w-auto text-center leading-tight">
                     しーちゃんのローコストビジネス術コンプリートセット
                 </div>
                 
-                <div class="flex flex-col items-center justify-center mt-10 mb-8">
-                    <span class="text-gray-400 line-through text-2xl mb-4">高額スクール相場: 500,000円〜1,000,000円</span>
-                    <!-- Price Display -->
+                <div class="flex flex-col items-center justify-center mt-12 sm:mt-10 mb-8">
+                    <span class="text-gray-400 line-through text-lg sm:text-2xl mb-4">高額スクール相場: 500,000円〜1,000,000円</span>
+                    <!-- Price Display (スマホではみ出さないよう text-5xl に調整) -->
                     <div class="flex items-baseline drop-shadow-[0_0_20px_rgba(250,204,21,0.5)]">
-                        <span class="text-7xl md:text-8xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-yellow-200 to-yellow-500 pb-2">98,000</span>
-                        <span class="text-3xl md:text-4xl font-bold ml-2 text-yellow-400">円</span>
-                        <span class="text-lg text-gray-300 ml-2">(税込)</span>
+                        <span class="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-yellow-200 to-yellow-500 pb-2">98,000</span>
+                        <span class="text-2xl sm:text-3xl md:text-4xl font-bold ml-2 text-yellow-400">円</span>
+                        <span class="text-sm sm:text-lg text-gray-300 ml-1 sm:ml-2">(税込)</span>
                     </div>
-                    <p class="text-green-400 font-bold mt-6 bg-green-400/10 px-5 py-2 rounded-full text-sm md:text-base border border-green-400/20">
+                    <p class="text-green-400 font-bold mt-6 bg-green-400/10 px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm md:text-base border border-green-400/20">
                         ※買い切りです。毎月の無駄なサブスク費用は一切かかりません。
                     </p>
-                    <p class="text-gray-300 font-bold mt-3 bg-white/5 px-5 py-2 rounded-full text-sm md:text-base border border-white/10 flex items-center justify-center">
-                        <i data-lucide="mail" class="w-4 h-4 mr-2"></i> ※最短数日で、メールアドレス宛に資料一式を送信します。
+                    <p class="text-gray-300 font-bold mt-3 bg-white/5 px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm md:text-base border border-white/10 flex items-center justify-center w-full sm:w-auto">
+                        <i data-lucide="mail" class="w-4 h-4 mr-2 shrink-0"></i> <span>※購入後、メールアドレス宛に資料一式を送信します。</span>
                     </p>
                 </div>
 
-                <ul class="text-left space-y-3 mb-10 max-w-sm mx-auto">
-                    <li class="flex items-center text-gray-200"><i data-lucide="check" class="text-primary w-5 h-5 mr-3 shrink-0"></i> 5つのステップの全コード＆プロンプト</li>
-                    <li class="flex items-center text-gray-200"><i data-lucide="check" class="text-primary w-5 h-5 mr-3 shrink-0"></i> 全ステップの解説動画・音声・スライド</li>
-                    <li class="flex items-center text-gray-200"><i data-lucide="check" class="text-accent w-5 h-5 mr-3 shrink-0"></i> 【限定】2つのキラー特典コンテンツ</li>
+                <ul class="text-left space-y-3 mb-10 max-w-sm mx-auto px-2">
+                    <li class="flex items-start text-gray-200 text-sm sm:text-base"><i data-lucide="check" class="text-primary w-5 h-5 mr-3 shrink-0 mt-0.5"></i> <span>5つのステップの全コード＆プロンプト</span></li>
+                    <li class="flex items-start text-gray-200 text-sm sm:text-base"><i data-lucide="check" class="text-primary w-5 h-5 mr-3 shrink-0 mt-0.5"></i> <span>全ステップの解説動画・音声・スライド</span></li>
+                    <li class="flex items-start text-gray-200 text-sm sm:text-base"><i data-lucide="check" class="text-accent w-5 h-5 mr-3 shrink-0 mt-0.5"></i> <span>【限定】2つのキラー特典コンテンツ</span></li>
                 </ul>
 
-                <!-- Shopify Buy Button Integration -->
-                <div class="w-full flex justify-center items-center text-center mx-auto">
+                <!-- Shopify Buy Button Integration (最前面 z-50 化) -->
+                <div class="w-full flex justify-center items-center text-center mx-auto relative z-50">
                     <div id='product-component-1775361395684'></div>
                 </div>
                 <script type="text/javascript">
@@ -443,8 +448,8 @@
                     "styles": {
                       "product": {
                         "@media (min-width: 601px)": {
-                          "max-width": "100%", /* 幅100%に強制 */
-                          "margin-left": "0px", /* 左余白を削除 */
+                          "max-width": "100%",
+                          "margin-left": "0px",
                           "margin-bottom": "0px"
                         },
                         "text-align": "center",
@@ -456,11 +461,11 @@
                         "font-size": "18px",
                         "padding-top": "16px",
                         "padding-bottom": "16px",
-                        "margin": "0 auto", /* ボタン自身を中央寄せ */
-                        "display": "block", /* blockにして幅を確保 */
-                        "background-color": "#3b82f6", /* Tailwindのprimary色に合わせる */
+                        "margin": "0 auto",
+                        "display": "block",
+                        "background-color": "#3b82f6",
                         "width": "100%",
-                        "max-width": "400px" /* 大きくなりすぎないように制限 */
+                        "max-width": "400px"
                       }
                     },
                     "buttonDestination": "checkout",
@@ -526,7 +531,16 @@
                 /*]]>*/
                 </script>
 
-                <div class="mt-6 flex items-center justify-center text-sm text-gray-400">
+                <!-- スマホでボタンが押せない場合のフォールバックリンク（追加部分） -->
+                <div class="mt-8 flex flex-col items-center justify-center relative z-50 w-full px-2">
+                    <p class="text-gray-400 text-xs sm:text-sm mb-3">※スマホ等で上のボタンが反応しない場合はこちら↓</p>
+                    <a href="https://maruno-room.myshopify.com/products/shichan-complete" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full max-w-[400px] px-4 sm:px-6 py-3 sm:py-4 border-2 border-yellow-500/50 text-yellow-400 hover:bg-yellow-400 hover:text-black rounded-xl font-bold transition-all text-sm sm:text-base shadow-lg shadow-yellow-500/10 group">
+                        <i data-lucide="external-link" class="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:scale-110 transition-transform shrink-0"></i>
+                        <span>ここから買えない人はこちらから</span>
+                    </a>
+                </div>
+
+                <div class="mt-8 flex items-center justify-center text-xs sm:text-sm text-gray-400">
                     <i data-lucide="lock" class="w-4 h-4 mr-1 shrink-0"></i> 安全なShopify決済で保護されています
                 </div>
             </div>
