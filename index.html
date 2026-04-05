@@ -546,11 +546,217 @@
             </div>
         </section>
 
+        <!-- Footer -->
+        <footer class="bg-darker border-t border-white/5 py-12 mt-20 relative z-40">
+            <div class="max-w-3xl mx-auto px-4">
+                <div class="text-center mb-6">
+                    <div class="font-black text-xl text-white/30 mb-2">YDK<span class="text-primary/30">.</span></div>
+                    <p class="text-gray-600/50 text-[10px]">© 2026 YDK合同会社 All Rights Reserved.</p>
+                </div>
+                
+                <!-- ポップアップ（モーダル）を開くリンクボタン -->
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 text-[11px] text-gray-500/70 mb-4">
+                    <button onclick="openModal('modal-tokushoho')" class="hover:text-gray-400 transition cursor-pointer">特定商取引法に基づく表記</button>
+                    <button onclick="openModal('modal-privacy')" class="hover:text-gray-400 transition cursor-pointer">プライバシーポリシー</button>
+                    <button onclick="openModal('modal-terms')" class="hover:text-gray-400 transition cursor-pointer">利用規約</button>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ==========================================
+         Modals (ポップアップ用隠しコンテンツ) 
+    =========================================== -->
+
+    <!-- 特定商取引法に基づく表記 Modal -->
+    <div id="modal-tokushoho" class="hidden fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm p-4 sm:p-6 opacity-0 transition-opacity duration-300">
+        <div class="relative w-full max-w-2xl max-h-[85vh] bg-slate-900 border border-white/10 rounded-2xl shadow-2xl overflow-y-auto mx-auto mt-10 sm:mt-20 p-6 sm:p-8">
+            <button onclick="closeModal('modal-tokushoho')" class="absolute top-4 right-4 text-gray-400 hover:text-white bg-white/5 hover:bg-white/10 p-2 rounded-full transition">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <h2 class="text-xl sm:text-2xl font-bold text-white mb-6 border-b border-white/10 pb-4">特定商取引法に基づく表記</h2>
+            
+            <div class="space-y-4 text-sm text-gray-300">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-white/5 pb-3">
+                    <span class="text-gray-500 font-bold">販売業者</span>
+                    <span class="sm:col-span-2">ＹＤＫ合同会社</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-white/5 pb-3">
+                    <span class="text-gray-500 font-bold">運営責任者</span>
+                    <span class="sm:col-span-2">”中河和子”</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-white/5 pb-3">
+                    <span class="text-gray-500 font-bold">所在地</span>
+                    <span class="sm:col-span-2">〒466-0022 愛知県名古屋市昭和区塩付通２丁目１―１</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-white/5 pb-3">
+                    <span class="text-gray-500 font-bold">電話番号</span>
+                    <span class="sm:col-span-2">+819026155133</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-white/5 pb-3">
+                    <span class="text-gray-500 font-bold">メールアドレス</span>
+                    <span class="sm:col-span-2">ydkcompany2026@gmail.com</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-white/5 pb-3">
+                    <span class="text-gray-500 font-bold">業種</span>
+                    <span class="sm:col-span-2">サービス業</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-white/5 pb-3">
+                    <span class="text-gray-500 font-bold">事業内容</span>
+                    <span class="sm:col-span-2">AIの開発や教育業など</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-white/5 pb-3">
+                    <span class="text-gray-500 font-bold">ストアURL</span>
+                    <span class="sm:col-span-2 break-all">https://maruno-room.myshopify.com</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-white/5 pb-3">
+                    <span class="text-gray-500 font-bold">商品・サービスの種類</span>
+                    <span class="sm:col-span-2">コンピューターソフトウェア</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-white/5 pb-3">
+                    <span class="text-gray-500 font-bold">価格帯</span>
+                    <span class="sm:col-span-2">価格はストアページ内の各商品に対して表示されているとおりです。</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-white/5 pb-3">
+                    <span class="text-gray-500 font-bold">商品代金以外に必要な料金</span>
+                    <span class="sm:col-span-2">発生しません</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-white/5 pb-3">
+                    <span class="text-gray-500 font-bold">配送/サービスの提供</span>
+                    <span class="sm:col-span-2">ご注文は3～5営業日を目安に提供されます</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-white/5 pb-3">
+                    <span class="text-gray-500 font-bold">支払時期</span>
+                    <span class="sm:col-span-2">ご予約時に全額お支払いください</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-white/5 pb-3">
+                    <span class="text-gray-500 font-bold">返品・キャンセル</span>
+                    <span class="sm:col-span-2">返品、交換、返金、ご注文のキャンセルは行っておりません。</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pb-3">
+                    <span class="text-gray-500 font-bold">その他</span>
+                    <span class="sm:col-span-2">特になし。</span>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <button onclick="closeModal('modal-tokushoho')" class="bg-white/10 hover:bg-white/20 text-white font-bold py-2 px-8 rounded-full transition">閉じる</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- プライバシーポリシー Modal -->
+    <div id="modal-privacy" class="hidden fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm p-4 sm:p-6 opacity-0 transition-opacity duration-300">
+        <div class="relative w-full max-w-2xl max-h-[85vh] bg-slate-900 border border-white/10 rounded-2xl shadow-2xl overflow-y-auto mx-auto mt-10 sm:mt-20 p-6 sm:p-8">
+            <button onclick="closeModal('modal-privacy')" class="absolute top-4 right-4 text-gray-400 hover:text-white bg-white/5 hover:bg-white/10 p-2 rounded-full transition">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <h2 class="text-xl sm:text-2xl font-bold text-white mb-6 border-b border-white/10 pb-4">プライバシーポリシー</h2>
+            
+            <div class="space-y-6 text-sm text-gray-300 leading-relaxed">
+                <p>ＹＤＫ合同会社（以下、「当社」といいます。）は、本ウェブサイト上で提供するサービスにおける、ユーザーの個人情報の取扱いについて、以下のとおりプライバシーポリシーを定めます。</p>
+                
+                <h3 class="text-white font-bold text-base mt-6">第1条（個人情報）</h3>
+                <p>「個人情報」とは、個人情報保護法にいう「個人情報」を指すものとし、生存する個人に関する情報であって、当該情報に含まれる氏名、生年月日、住所、電話番号、連絡先その他の記述等により特定の個人を識別できる情報を指します。</p>
+                
+                <h3 class="text-white font-bold text-base mt-6">第2条（個人情報の収集方法）</h3>
+                <p>当社は、ユーザーが利用登録をする際に氏名、生年月日、住所、電話番号、メールアドレス、銀行口座番号、クレジットカード番号などの個人情報をお尋ねすることがあります。</p>
+                
+                <h3 class="text-white font-bold text-base mt-6">第3条（個人情報を収集・利用する目的）</h3>
+                <p>当社が個人情報を収集・利用する目的は、以下のとおりです。<br>
+                1. 当社サービスの提供・運営のため<br>
+                2. ユーザーからのお問い合わせに回答するため（本人確認を行うことを含む）<br>
+                3. メンテナンス、重要なお知らせなど必要に応じたご連絡のため</p>
+
+                <h3 class="text-white font-bold text-base mt-6">第4条（個人情報の第三者提供）</h3>
+                <p>当社は、次に掲げる場合を除いて、あらかじめユーザーの同意を得ることなく、第三者に個人情報を提供することはありません。ただし、個人情報保護法その他の法令で認められる場合を除きます。</p>
+
+                <h3 class="text-white font-bold text-base mt-6">第5条（お問い合わせ窓口）</h3>
+                <p>本ポリシーに関するお問い合わせは、下記の窓口までお願いいたします。<br>
+                住所：〒466-0022 愛知県名古屋市昭和区塩付通２丁目１―１<br>
+                社名：ＹＤＫ合同会社<br>
+                Eメールアドレス：ydkcompany2026@gmail.com</p>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <button onclick="closeModal('modal-privacy')" class="bg-white/10 hover:bg-white/20 text-white font-bold py-2 px-8 rounded-full transition">閉じる</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 利用規約 Modal -->
+    <div id="modal-terms" class="hidden fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm p-4 sm:p-6 opacity-0 transition-opacity duration-300">
+        <div class="relative w-full max-w-2xl max-h-[85vh] bg-slate-900 border border-white/10 rounded-2xl shadow-2xl overflow-y-auto mx-auto mt-10 sm:mt-20 p-6 sm:p-8">
+            <button onclick="closeModal('modal-terms')" class="absolute top-4 right-4 text-gray-400 hover:text-white bg-white/5 hover:bg-white/10 p-2 rounded-full transition">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <h2 class="text-xl sm:text-2xl font-bold text-white mb-6 border-b border-white/10 pb-4">利用規約</h2>
+            
+            <div class="space-y-6 text-sm text-gray-300 leading-relaxed">
+                <p>この利用規約（以下、「本規約」といいます。）は、ＹＤＫ合同会社（以下、「当社」といいます。）がこのウェブサイト上で提供するサービス（以下、「本サービス」といいます。）の利用条件を定めるものです。登録ユーザーの皆さま（以下、「ユーザー」といいます。）には、本規約に従って、本サービスをご利用いただきます。</p>
+                
+                <h3 class="text-white font-bold text-base mt-6">第1条（適用）</h3>
+                <p>本規約は、ユーザーと当社との間の本サービスの利用に関わる一切の関係に適用されるものとします。</p>
+                
+                <h3 class="text-white font-bold text-base mt-6">第2条（禁止事項）</h3>
+                <p>ユーザーは、本サービスの利用にあたり、以下の行為をしてはなりません。<br>
+                1. 法令または公序良俗に違反する行為<br>
+                2. 犯罪行為に関連する行為<br>
+                3. 当社、本サービスの他のユーザー、または第三者のサーバーまたはネットワークの機能を破壊したり、妨害したりする行為<br>
+                4. 本サービスによって得られた情報を商業的に利用する行為（当社が許可した場合を除く）<br>
+                5. 提供コンテンツの複製、転載、再配布等、著作権を侵害する行為</p>
+
+                <h3 class="text-white font-bold text-base mt-6">第3条（本サービスの提供の停止等）</h3>
+                <p>当社は、以下のいずれかの事由があると判断した場合、ユーザーに事前に通知することなく本サービスの全部または一部の提供を停止または中断することができるものとします。<br>
+                1. 本サービスにかかるコンピュータシステムの保守点検または更新を行う場合<br>
+                2. 地震、落雷、火災、停電または天災などの不可抗力により、本サービスの提供が困難となった場合</p>
+
+                <h3 class="text-white font-bold text-base mt-6">第4条（免責事項）</h3>
+                <p>当社は、本サービスに事実上または法律上の瑕疵（安全性、信頼性、正確性、完全性、有効性、特定の目的への適合性、セキュリティなどに関する欠陥、エラーやバグ、権利侵害などを含みます。）がないことを明示的にも黙示的にも保証しておりません。<br>
+                本サービスの利用によりユーザーに生じた損害について、当社は一切の責任を負いません。本サービスで提供されるノウハウやツールの利用は、ユーザー自身の責任において行われるものとします。</p>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <button onclick="closeModal('modal-terms')" class="bg-white/10 hover:bg-white/20 text-white font-bold py-2 px-8 rounded-full transition">閉じる</button>
+            </div>
+        </div>
     </div>
 
     <!-- Initialize Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // Modal Logic (ポップアップの開閉制御)
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.remove('hidden');
+            modal.classList.add('flex'); // flexboxで中央寄せ
+            // アニメーションのため少し遅らせてopacityを変更
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
+            // 背面のスクロールを禁止
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.add('opacity-0');
+            // opacityアニメーションが終わってから非表示にする
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 300);
+            // 背面のスクロールを許可
+            document.body.style.overflow = '';
+        }
+
+        // モーダルの背景（黒い部分）をクリックしたときにも閉じる
+        window.onclick = function(event) {
+            if (event.target.classList.contains('fixed') && event.target.id.startsWith('modal-')) {
+                closeModal(event.target.id);
+            }
+        }
+
         // Initialize AOS Animation
         AOS.init({
             duration: 800,
