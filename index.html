@@ -343,6 +343,35 @@
             </div>
         </section>
 
+        <!-- Reproducibility Conditions (追加: 再現条件の明示) -->
+        <section class="py-16 bg-black/80 border-y border-red-500/20 relative z-10">
+            <div class="max-w-4xl mx-auto px-4">
+                <div data-aos="fade-up" class="bg-slate-900/80 border border-red-500/30 rounded-2xl p-6 sm:p-10 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-red-500 text-white font-bold text-xs sm:text-sm px-6 py-1.5 rounded-full tracking-wider whitespace-nowrap shadow-lg shadow-red-500/20">
+                        【重要】ご購入前の「再現条件」の開示
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-center mb-6 mt-4 text-white">誰でも・簡単に・すぐ稼げるわけではありません。</h3>
+                    <p class="text-gray-400 text-sm sm:text-base leading-relaxed mb-8 text-center">
+                        私はエンジニアです。「スマホで1日5分」のような曖昧な言葉で煽るつもりは一切ありません。本質は「再現条件」です。本キットのノウハウを構築するためには、以下の条件をご理解いただく必要があります。
+                    </p>
+                    <ul class="space-y-6 text-sm sm:text-base text-gray-300">
+                        <li class="flex items-start bg-black/40 p-4 rounded-xl border border-white/5">
+                            <i data-lucide="x-octagon" class="text-red-400 w-5 h-5 sm:w-6 sm:h-6 mr-3 sm:mr-4 shrink-0 mt-0.5"></i>
+                            <div><strong class="text-white block mb-1">「誰でもできる」の否定：</strong>PC（Win/Mac問わず）での基本操作ができ、マニュアルを読んで自ら手を動かせる方限定です。「思考停止のコピペ」で一生稼げる魔法はありません。</div>
+                        </li>
+                        <li class="flex items-start bg-black/40 p-4 rounded-xl border border-white/5">
+                            <i data-lucide="x-octagon" class="text-red-400 w-5 h-5 sm:w-6 sm:h-6 mr-3 sm:mr-4 shrink-0 mt-0.5"></i>
+                            <div><strong class="text-white block mb-1">「0円でできる」の定義：</strong>本キットの設計図代（98,000円）は頂戴します。私が言う0円とは、「毎月の高額なAPI課金」や「月額数万円のコンサル費」といった<strong class="text-yellow-400">理不尽なランニングコストが0円</strong>（ローカル環境や無料ツールで完結する）という意味です。</div>
+                        </li>
+                        <li class="flex items-start bg-black/40 p-4 rounded-xl border border-white/5">
+                            <i data-lucide="x-octagon" class="text-red-400 w-5 h-5 sm:w-6 sm:h-6 mr-3 sm:mr-4 shrink-0 mt-0.5"></i>
+                            <div><strong class="text-white block mb-1">「短期間で稼げる」の否定：</strong>スクリプトを動かして明日100万円が入るわけではありません。AIに正しいコンテキストを与え、あなた自身の「資産（デジタル商品）」を論理的に構築していくためのエンジニアリング設計図です。</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <!-- Bonus Section -->
         <section class="py-20 bg-amber-900/10 border-y border-amber-500/20 relative overflow-hidden">
             <!-- w-[800px]によるはみ出しを防ぐため親にoverflow-hiddenを付与済み -->
@@ -388,7 +417,7 @@
                 </div>
                 
                 <div class="flex flex-col items-center justify-center mt-12 sm:mt-10 mb-8">
-                    <span class="text-gray-400 line-through text-lg sm:text-2xl mb-4">高額スクール: 500,000円〜3,000,000円</span>
+                    <span class="text-gray-400 line-through text-lg sm:text-2xl mb-4">高額スクール相場: 500,000円〜1,000,000円</span>
                     <!-- Price Display (スマホではみ出さないよう text-5xl に調整) -->
                     <div class="flex items-baseline drop-shadow-[0_0_20px_rgba(250,204,21,0.5)]">
                         <span class="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-yellow-200 to-yellow-500 pb-2">98,000</span>
@@ -403,11 +432,57 @@
                     </p>
                 </div>
 
-                <ul class="text-left space-y-3 mb-10 max-w-sm mx-auto px-2">
-                    <li class="flex items-start text-gray-200 text-sm sm:text-base"><i data-lucide="check" class="text-primary w-5 h-5 mr-3 shrink-0 mt-0.5"></i> <span>5つのステップの全コード＆プロンプト</span></li>
-                    <li class="flex items-start text-gray-200 text-sm sm:text-base"><i data-lucide="check" class="text-primary w-5 h-5 mr-3 shrink-0 mt-0.5"></i> <span>全ステップの解説動画・音声・スライド</span></li>
-                    <li class="flex items-start text-gray-200 text-sm sm:text-base"><i data-lucide="check" class="text-accent w-5 h-5 mr-3 shrink-0 mt-0.5"></i> <span>【限定】2つのキラー特典コンテンツ</span></li>
-                </ul>
+                <!-- 差し替え: パッケージ内容の詳細ボックス -->
+                <div class="bg-slate-900/80 border border-white/10 rounded-2xl p-6 sm:p-8 mb-10 text-left max-w-2xl mx-auto shadow-xl relative z-40">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-6 text-center border-b border-white/10 pb-4">【お届けするパッケージ内容】</h3>
+                    
+                    <p class="text-sm text-gray-400 mb-6 text-center">
+                        決済完了後、ご登録メールアドレス宛に以下のデータ一式（ダウンロードリンク）を即時送信いたします。
+                    </p>
+
+                    <div class="space-y-6">
+                        <!-- メインコンテンツ -->
+                        <div>
+                            <h4 class="text-primary font-bold text-sm sm:text-base mb-3 flex items-center">
+                                <i data-lucide="package" class="w-5 h-5 mr-2"></i> メインシステム・コード群
+                            </h4>
+                            <ul class="space-y-2 text-sm sm:text-base text-gray-300 ml-1">
+                                <li class="flex items-start"><i data-lucide="check" class="text-green-400 w-4 h-4 mr-2 shrink-0 mt-1"></i> <span>AI役割定義・限界突破プロンプト辞書</span></li>
+                                <li class="flex items-start"><i data-lucide="check" class="text-green-400 w-4 h-4 mr-2 shrink-0 mt-1"></i> <span>デジタル商品自動パッケージ化システム（Pythonコード）</span></li>
+                                <li class="flex items-start"><i data-lucide="check" class="text-green-400 w-4 h-4 mr-2 shrink-0 mt-1"></i> <span>「反証型」LPライティング・キャッチコピー生成プロンプト</span></li>
+                                <li class="flex items-start"><i data-lucide="check" class="text-green-400 w-4 h-4 mr-2 shrink-0 mt-1"></i> <span>Threads自動抽出スクリプト ＆ 投稿自動生成マクロ（GAS/Python）</span></li>
+                                <li class="flex items-start"><i data-lucide="check" class="text-green-400 w-4 h-4 mr-2 shrink-0 mt-1"></i> <span>一気通貫・全自動化マクロ設計図（システム全体図）</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- サポート資料 -->
+                        <div>
+                            <h4 class="text-gray-300 font-bold text-sm sm:text-base mb-3 flex items-center">
+                                <i data-lucide="book-open" class="w-5 h-5 mr-2"></i> 実践サポートガイド
+                            </h4>
+                            <ul class="space-y-2 text-sm sm:text-base text-gray-300 ml-1">
+                                <li class="flex items-start"><i data-lucide="file-text" class="text-gray-400 w-4 h-4 mr-2 shrink-0 mt-1"></i> <span>迷わず進める「7日間の実践ロードマップ」</span></li>
+                                <li class="flex items-start"><i data-lucide="file-text" class="text-gray-400 w-4 h-4 mr-2 shrink-0 mt-1"></i> <span>各ツールの詳細な使い方ガイド・解説資料（README等）</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- 限定特典 -->
+                        <div>
+                            <h4 class="text-accent font-bold text-sm sm:text-base mb-3 flex items-center">
+                                <i data-lucide="gift" class="w-5 h-5 mr-2"></i> 限定ボーナスコンテンツ
+                            </h4>
+                            <ul class="space-y-2 text-sm sm:text-base text-gray-300 ml-1">
+                                <li class="flex items-start"><i data-lucide="star" class="text-accent w-4 h-4 mr-2 shrink-0 mt-1 fill-accent"></i> <span>【暴露】100万円AIスクールが隠すコストと闇（PDFレポート）</span></li>
+                                <li class="flex items-start"><i data-lucide="star" class="text-accent w-4 h-4 mr-2 shrink-0 mt-1 fill-accent"></i> <span>【奥義】2026年最新 LLMコンテキストエンジニアリング解説（マニュアル）</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 pt-4 border-t border-white/5 text-xs text-gray-500 leading-relaxed">
+                        ※提供形式：デジタルデータ（PDF、テキストファイル、Python/HTML/GASコード等のスクリプトファイル）。<br>
+                        ※商品の性質上、決済完了後の返品・返金はいかなる場合もお受けできません。上の「再現条件」をご確認の上、ご自身のPC環境で実践できる方のみご購入ください。
+                    </div>
+                </div>
 
                 <!-- Shopify Buy Button Integration (最前面 z-50 化) -->
                 <div class="w-full flex justify-center items-center text-center mx-auto relative z-50">
@@ -583,7 +658,7 @@
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-white/5 pb-3">
                     <span class="text-gray-500 font-bold">運営責任者</span>
-                    <span class="sm:col-span-2">”中河和子”</span>
+                    <span class="sm:col-span-2">”後で記入”</span>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 border-b border-white/5 pb-3">
                     <span class="text-gray-500 font-bold">所在地</span>
